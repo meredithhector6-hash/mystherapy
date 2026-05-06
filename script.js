@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ===== SUJETS VERROUILLÉS =====
   // Pour débloquer un sujet, ajoute son numéro ici
-  const sujetsDebloques = [1];
+  const sujetsDebloques = [1,2];
 
   const liens = document.querySelectorAll('.sujet-lien');
   liens.forEach((lien) => {
