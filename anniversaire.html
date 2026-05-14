@@ -25,4 +25,401 @@
       z-index: 999;
     }
 
-    /* ===== WRAPPER
+    /* ===== WRAPPER ===== */
+    .page {
+      max-width: 520px;
+      margin: 0 auto;
+      padding: 30px 20px 50px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ===== EN-TÊTE ===== */
+    .entete {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+
+    .joyeux {
+      font-size: 11px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: #2e6da4;
+      margin-bottom: 6px;
+    }
+
+    .prenom {
+      font-family: 'Playfair Display', serif;
+      font-size: 52px;
+      font-weight: 700;
+      color: #1a4a72;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+
+    .age-ligne {
+      font-size: 13px;
+      color: #4a7fa5;
+      letter-spacing: 0.15em;
+      font-weight: 300;
+    }
+
+    /* ===== CALENDRIER ===== */
+    .calendrier-wrap {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 18px 20px;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 20px rgba(46, 109, 164, 0.1);
+      border: 1px solid rgba(46, 109, 164, 0.15);
+    }
+
+    .cal-mois {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      color: #1a4a72;
+      margin-bottom: 12px;
+      text-align: center;
+    }
+
+    .cal-grille {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 4px;
+      text-align: center;
+    }
+
+    .cal-jour-nom {
+      font-size: 9px;
+      color: #7a9ab5;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 4px 0;
+      font-weight: 600;
+    }
+
+    .cal-jour {
+      font-size: 11px;
+      color: #3a6080;
+      padding: 6px 2px;
+      border-radius: 6px;
+      font-weight: 300;
+    }
+
+    .cal-jour.vide { color: transparent; }
+
+    .cal-jour.anniversaire {
+      background: #2e6da4;
+      color: #ffffff;
+      font-weight: 600;
+      border-radius: 50%;
+      width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+      font-size: 12px;
+      box-shadow: 0 2px 8px rgba(46, 109, 164, 0.4);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 2px 8px rgba(46, 109, 164, 0.4); }
+      50% { box-shadow: 0 2px 16px rgba(46, 109, 164, 0.7); }
+    }
+
+    /* ===== GRILLE PHOTOS ===== */
+    .photos-titre {
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #4a7fa5;
+      text-align: center;
+      margin-bottom: 14px;
+    }
+
+    .photos-grille {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      margin-bottom: 24px;
+    }
+
+    .photo-item {
+      aspect-ratio: 1;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 3px 12px rgba(46, 109, 164, 0.15);
+      border: 2px solid rgba(255,255,255,0.8);
+    }
+
+    .photo-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .photo-placeholder {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #c8dff0, #a8c8e0);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+      color: #2e6da4;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+    }
+
+    /* ===== CITATION ===== */
+    .citation-wrap {
+      background: #ffffff;
+      border-left: 3px solid #2e6da4;
+      border-radius: 0 12px 12px 0;
+      padding: 16px 20px;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 16px rgba(46, 109, 164, 0.08);
+    }
+
+    .citation-texte {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 14px;
+      color: #2c3e50;
+      line-height: 1.7;
+      margin-bottom: 8px;
+    }
+
+    .citation-auteur {
+      font-size: 10px;
+      color: #7a9ab5;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    /* ===== MESSAGE ===== */
+    .message-wrap {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 22px 24px;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 20px rgba(46, 109, 164, 0.1);
+      border: 1px solid rgba(46, 109, 164, 0.12);
+      text-align: center;
+    }
+
+    .message-de {
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #4a7fa5;
+      margin-bottom: 14px;
+    }
+
+    .message-texte {
+      font-size: 13px;
+      color: #2c3e50;
+      line-height: 1.85;
+      font-weight: 300;
+    }
+
+    /* ===== LUMIÈRES ===== */
+    .lumieres {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    .lumiere {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      animation: clignoter 1.5s infinite;
+    }
+
+    .lumiere:nth-child(odd) { background: #2e6da4; animation-delay: 0s; }
+    .lumiere:nth-child(even) { background: #1a4a72; animation-delay: 0.75s; }
+
+    @keyframes clignoter {
+      0%, 100% { opacity: 1; box-shadow: 0 0 6px currentColor; }
+      50% { opacity: 0.3; box-shadow: none; }
+    }
+
+    /* ===== PIED ===== */
+    .pied {
+      text-align: center;
+      font-size: 10px;
+      color: #7a9ab5;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+
+<canvas id="confetti-canvas"></canvas>
+
+<div class="page">
+
+  <!-- EN-TÊTE -->
+  <div class="entete">
+    <p class="joyeux">✦ Joyeux anniversaire ✦</p>
+    <h1 class="prenom">Sheldon</h1>
+    <p class="age-ligne">30 ans · 19 mai</p>
+  </div>
+
+  <!-- LUMIÈRES -->
+  <div class="lumieres">
+    <span class="lumiere"></span>
+    <span class="lumiere"></span>
+    <span class="lumiere"></span>
+    <span class="lumiere"></span>
+    <span class="lumiere"></span>
+    <span class="lumiere"></span>
+    <span class="lumiere"></span>
+    <span class="lumiere"></span>
+    <span class="lumiere"></span>
+  </div>
+
+  <!-- CALENDRIER MAI -->
+  <div class="calendrier-wrap">
+    <div class="cal-mois">Mai 2026</div>
+    <div class="cal-grille">
+      <div class="cal-jour-nom">Dim</div>
+      <div class="cal-jour-nom">Lun</div>
+      <div class="cal-jour-nom">Mar</div>
+      <div class="cal-jour-nom">Mer</div>
+      <div class="cal-jour-nom">Jeu</div>
+      <div class="cal-jour-nom">Ven</div>
+      <div class="cal-jour-nom">Sam</div>
+      <!-- Semaine 1 -->
+      <div class="cal-jour vide"></div>
+      <div class="cal-jour vide"></div>
+      <div class="cal-jour vide"></div>
+      <div class="cal-jour vide"></div>
+      <div class="cal-jour">1</div>
+      <div class="cal-jour">2</div>
+      <div class="cal-jour">3</div>
+      <!-- Semaine 2 -->
+      <div class="cal-jour">4</div>
+      <div class="cal-jour">5</div>
+      <div class="cal-jour">6</div>
+      <div class="cal-jour">7</div>
+      <div class="cal-jour">8</div>
+      <div class="cal-jour">9</div>
+      <div class="cal-jour">10</div>
+      <!-- Semaine 3 -->
+      <div class="cal-jour">11</div>
+      <div class="cal-jour">12</div>
+      <div class="cal-jour">13</div>
+      <div class="cal-jour">14</div>
+      <div class="cal-jour">15</div>
+      <div class="cal-jour">16</div>
+      <div class="cal-jour">17</div>
+      <!-- Semaine 4 -->
+      <div class="cal-jour">18</div>
+      <div class="cal-jour anniversaire">19</div>
+      <div class="cal-jour">20</div>
+      <div class="cal-jour">21</div>
+      <div class="cal-jour">22</div>
+      <div class="cal-jour">23</div>
+      <div class="cal-jour">24</div>
+      <!-- Semaine 5 -->
+      <div class="cal-jour">25</div>
+      <div class="cal-jour">26</div>
+      <div class="cal-jour">27</div>
+      <div class="cal-jour">28</div>
+      <div class="cal-jour">29</div>
+      <div class="cal-jour">30</div>
+      <div class="cal-jour">31</div>
+    </div>
+  </div>
+
+  <!-- PHOTOS -->
+  <p class="photos-titre">Quelques moments</p>
+  <div class="photos-grille">
+    <!-- Remplace "photo1.jpg" par le vrai nom de ta photo -->
+    <div class="photo-item"><div class="photo-placeholder">photo1.jpg</div></div>
+    <div class="photo-item"><div class="photo-placeholder">photo2.jpg</div></div>
+    <div class="photo-item"><div class="photo-placeholder">photo3.jpg</div></div>
+    <div class="photo-item"><div class="photo-placeholder">photo4.jpg</div></div>
+    <div class="photo-item"><div class="photo-placeholder">photo5.jpg</div></div>
+    <div class="photo-item"><div class="photo-placeholder">photo6.jpg</div></div>
+    <div class="photo-item"><div class="photo-placeholder">photo7.jpg</div></div>
+    <div class="photo-item"><div class="photo-placeholder">photo8.jpg</div></div>
+    <div class="photo-item"><div class="photo-placeholder">photo9.jpg</div></div>
+  </div>
+
+  <!-- CITATION -->
+  <div class="citation-wrap">
+    <p class="citation-texte">« Vieillir, c'est passer de la passion à la compassion. »</p>
+    <p class="citation-auteur">— Albert Camus</p>
+  </div>
+
+  <!-- MESSAGE -->
+  <div class="message-wrap">
+    <p class="message-de">Un mot pour toi</p>
+    <p class="message-texte">Je te souhaite de chaque jour te sentir porté, soutenu, comme chaque jour tu le fais pour les autres et que ton compte en banque soit aussi grand que ton cœur. Tes projets aboutiront, tes rêves se réaliseront et ton bonheur profitera à tous ceux que tu aimes. Tu mérites d'être heureux.</p>
+  </div>
+
+  <div class="pied">✦ avec affection ✦</div>
+
+</div>
+
+<script>
+// ===== CONFETTIS =====
+const canvas = document.getElementById('confetti-canvas');
+const ctx = canvas.getContext('2d');
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+window.addEventListener('resize', () => {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+});
+
+const couleurs = ['#2e6da4', '#1a4a72', '#4a90c4', '#a0c4e0', '#ffffff', '#6aafd4'];
+
+const particules = Array.from({ length: 80 }, () => ({
+  x: Math.random() * canvas.width,
+  y: Math.random() * canvas.height - canvas.height,
+  w: Math.random() * 8 + 4,
+  h: Math.random() * 4 + 2,
+  couleur: couleurs[Math.floor(Math.random() * couleurs.length)],
+  vitesse: Math.random() * 2 + 1,
+  angle: Math.random() * 360,
+  rotation: Math.random() * 4 - 2,
+  oscillation: Math.random() * 2 - 1
+}));
+
+function animer() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  particules.forEach(p => {
+    p.y += p.vitesse;
+    p.x += p.oscillation;
+    p.angle += p.rotation;
+    if (p.y > canvas.height) {
+      p.y = -10;
+      p.x = Math.random() * canvas.width;
+    }
+    ctx.save();
+    ctx.translate(p.x, p.y);
+    ctx.rotate(p.angle * Math.PI / 180);
+    ctx.fillStyle = p.couleur;
+    ctx.globalAlpha = 0.75;
+    ctx.fillRect(-p.w / 2, -p.h / 2, p.w, p.h);
+    ctx.restore();
+  });
+  requestAnimationFrame(animer);
+}
+animer();
+</script>
+
+</body>
+</html>
